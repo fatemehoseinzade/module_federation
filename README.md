@@ -56,13 +56,13 @@ export default defineConfig({
 After cloning the repository, you need to first set up and build each of the micro-apps individually.
 
 1. Navigate to each remote micro-app directory:
-  ```bash
-     cd remote-app1
-   ```
+```bash
+cd remote-app1
+```
 2. Install dependencies and build the micro-app:
-   ```bash
-    pnpm install
-    pnpm build
+```bash
+pnpm install
+pnpm build
 ```
 3. Run the micro-app:
 ```bash
