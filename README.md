@@ -47,7 +47,7 @@ export default defineConfig({
     target: 'esnext',
   },
 });
-
+```
 
 ## Cloning and Running the Project
 
