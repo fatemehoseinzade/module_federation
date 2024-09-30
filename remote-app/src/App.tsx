@@ -1,14 +1,12 @@
-import './App.css'
-import Button from './Button'
+import Button from './components/Button'
 
 function App()
 {
-
   return (
-    <>
-      <h1>This is the Remote App </h1>
+    <div className='w-screen min-h-screen flex flex-col justify-center items-center gap-10 bg-gray-900'>
+      <h1 className='text-blue-400 text-5xl'>This is the Remote App </h1>
       <Button />
-    </>
+    </div>
   )
 }
 

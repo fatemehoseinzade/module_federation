@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import federation from '@originjs/vite-plugin-federation'
+import tailwindcss from 'tailwindcss'
 
 export default defineConfig({
   plugins: [
@@ -13,8 +14,14 @@ export default defineConfig({
         "./App": './src/App.tsx'
       },
       shared: ['react', 'react-dom']
-    })
+    }),
+
   ],
+  css: {
+    postcss: {
+      plugins: [tailwindcss()],
+    },
+  },
   build: {
     modulePreload: false,
     target: 'esnext',
