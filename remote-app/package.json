@@ -7,8 +7,8 @@
     "dev": "vite --port 5001 --strictPort",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "tsc && vite build && vite preview --port=5001 --strictPort",
-    "serve": "vite preview --port 5001 --strictPort "
+    "serve": "vite preview --port 5001 --strictPort ",
+    "bp": "tsc && vite build && vite preview --port=5001 --strictPort"
   },
   "dependencies": {
     "react": "^18.3.1",
