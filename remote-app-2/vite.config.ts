@@ -1,23 +1,22 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import federation from '@originjs/vite-plugin-federation'
-import tailwindcss from "tailwindcss";
+import tailwindcss from 'tailwindcss'
 
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: 'host-app',
-      remotes: {
-        remoteApp: "http://localhost:5001/assets/remoteEntry.js",
-        remoteApp2: "http://localhost:5003/assets/remoteEntry.js",
+      name: 'remote-app-2',
+      filename: 'remoteEntry.js',
+      exposes: {
+        "./App": './src/App.tsx'
       },
       shared: ['react', 'react-dom']
-    })
+    }),
+
   ],
-  server: {
-    cors: true,
-  },
   css: {
     postcss: {
       plugins: [tailwindcss()],

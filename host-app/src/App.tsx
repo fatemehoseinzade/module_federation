@@ -4,6 +4,7 @@ import Dashboard from './pages/dashboard';
 
 import clsx from 'clsx';
 const RemoteApp = React.lazy(() => import('remoteApp/App'));
+const RemoteApp2 = React.lazy(() => import('remoteApp2/App'));
 
 type linksType = 'dashboard' | 'mico-app1' | 'micro-app2'
 
@@ -38,7 +39,10 @@ function App()
         {currentMicroApp === 'micro-app2' && (
 
           <div className='w-11/12 h-screen'>
-            <h1>MICRO APP 2</h1>
+            <Suspense fallback={<div>Loading...</div>}>
+              <RemoteApp2 />
+            </Suspense>
+
           </div>
         )}
       </div>
